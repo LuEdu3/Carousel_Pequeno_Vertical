@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.carrossel {
+    position: relative;
+    width: 250px;  /* Tamanho menor */
+    height: 300px; /* Tamanho menor */
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ajusta a imagem para cobrir toda a área do slide */
+    border-bottom: 2px solid #ccc;
+}
+
+button {
+    position: absolute;
+    background-color: transparent;  /* Fundo totalmente transparente */
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease;
+}
+
+button:hover {
+    color: #ccc;  /* Altera a cor do ícone ao passar o mouse */
+}
+
+.prev {
+    top: 10px;      /* Setas no topo */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.next {
+    bottom: 10px;   /* Setas no fundo */
+    left: 50%;
+    transform: translateX(-50%);
+}
